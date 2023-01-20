@@ -16,16 +16,19 @@
     {fbvFormArea}
         <div class="pkp_notification">
             <div class="notifyWarning">
-                {translate key="plugins.blocks.pdf.cookie.warning"}
+                {translate key="Bem vindo ao plugin de fixação de pdf!
+                Em seguida adicione um título para que os leitores saibam do que se trata o PDF.
+                Selecione o arquivo PDF. Por fim, se necessário, escreva uma pequena descrição."}
             </div>
         </div>
-		{fbvFormSection title="plugins.blocks.pdf.pdf.title"}
+		{fbvFormSection title="Título:"}
 			{fbvElement type="text" id="pdfTitle" value=$pdfTitle}
 		{/fbvFormSection}
-		{fbvFormSection title="plugins.blocks.pdf.pdf.file"}
+		{fbvFormSection title="Selecione o Arquivo:"}
 			{fbvElement type="text" id="pdfFile" value=$pdfFile}
+            
 		{/fbvFormSection}
-		{fbvFormSection title="plugins.blocks.pdf.pdf.description"}
+		{fbvFormSection title="Descrição:"}
 			{fbvElement type="text" id="pdfDescription" value=$pdfDescription}
 		{/fbvFormSection}
 		

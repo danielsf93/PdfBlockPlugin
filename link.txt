@@ -1,0 +1,1 @@
+<a href="//www.google.com"><img src="http://0.0.0.0:8888/plugins/blocks/developedBy/logopdf.png" class="media-object  img-responsive img-thumbnail"></a>

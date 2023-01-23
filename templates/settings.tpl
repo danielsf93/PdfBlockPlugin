@@ -21,6 +21,9 @@
                 Selecione o arquivo PDF. Por fim, se necessário, escreva uma pequena descrição."}
             </div>
         </div>
+		{fbvFormSection title="Site Url:"}
+			{fbvElement type="text" id="siteUrl" value=$siteurl}
+		{/fbvFormSection}
 		{fbvFormSection title="Título:"}
 			{fbvElement type="text" id="pdfTitle" value=$pdfTitle}
 		{/fbvFormSection}
@@ -33,10 +36,11 @@
 		{/fbvFormSection}
 		
 
+$urlfim = "/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file";
 
 			<li>
 				
-<a href="http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file" id="component-grid-settings-library-libraryfileadmingrid-addFile-button-63ce8c6567305" title="Add a file" class="pkp_controllers_linkAction pkp_linkaction_addFile pkp_linkaction_icon_add">Add a file</a>
+<a href= $siteurl . $urlfim id="component-grid-settings-library-libraryfileadmingrid-addFile-button-63ce8c6567305" title="Add a file" class="pkp_controllers_linkAction pkp_linkaction_addFile pkp_linkaction_icon_add">Add a file</a>
 
 <script>
 		$(function() {
@@ -53,7 +57,8 @@
 					"closeCleanVueInstances": [],
 					"closeButtonText": "Close Panel",
 					"modalHandler": "$.pkp.controllers.modal.AjaxModalHandler",
-					"url": "http:\/\/0.0.0.0:8888\/index.php\/mercurio\/$$$call$$$\/grid\/settings\/library\/library-file-admin-grid\/add-file",
+					"url": "http://0.0.0.0:8888/index.php/dois/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file",
+					
 			}
 }
 			);

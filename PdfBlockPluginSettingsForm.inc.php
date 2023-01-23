@@ -27,6 +27,7 @@ class PdfBlockPluginSettingsForm extends Form
     	$request = Application::get()->getRequest();
 	    $context = $request->getContext();
 	    $contextId = ($context && $context->getId()) ? $context->getId() : CONTEXT_SITE;
+        $this->setData('siteUrl', $this->plugin->getSetting($contextId, 'siteUrl'));
         $this->setData('pdfTitle', $this->plugin->getSetting($contextId, 'pdfTitle'));
         $this->setData('pdfFile', $this->plugin->getSetting($contextId, 'pdfFile'));
         $this->setData('pdfDescription', $this->plugin->getSetting($contextId, 'pdfDescription'));

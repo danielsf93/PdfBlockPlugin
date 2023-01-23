@@ -24,6 +24,7 @@ class PdfBlockPlugin extends BlockPlugin
 	{
 		$context = Application::get()->getRequest()->getContext();
 		$contextId = ($context && $context->getId()) ? $context->getId() : CONTEXT_SITE;
+		$templateMgr->assign('siteUrl', $this->getSetting($contextId, 'siteUrl'));
 		$templateMgr->assign('pdfTitle', $this->getSetting($contextId, 'pdfTitle'));
 		$templateMgr->assign('pdfFile', $this->getSetting($contextId, 'pdfFile'));
 		$templateMgr->assign('pdfDescription', $this->getSetting($contextId, 'pdfDescription'));

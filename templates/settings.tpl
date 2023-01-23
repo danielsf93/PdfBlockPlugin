@@ -32,6 +32,35 @@
 			{fbvElement type="text" id="pdfDescription" value=$pdfDescription}
 		{/fbvFormSection}
 		
+
+
+			<li>
+				
+<a href="http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file" id="component-grid-settings-library-libraryfileadmingrid-addFile-button-63ce8c6567305" title="Add a file" class="pkp_controllers_linkAction pkp_linkaction_addFile pkp_linkaction_icon_add">Add a file</a>
+
+<script>
+		$(function() {
+		$('#component-grid-settings-library-libraryfileadmingrid-addFile-button-63ce8c6567305').pkpHandler(
+			'$.pkp.controllers.linkAction.LinkActionHandler',
+				{
+		staticId: "component-grid-settings-library-libraryfileadmingrid-addFile-button",
+		actionRequest: "$.pkp.classes.linkAction.ModalRequest",
+	actionRequestOptions: {
+					"title": "Add a file",
+					"titleIcon": "modal_add_file",
+					"canClose": "1",
+					"closeOnFormSuccessId": null,
+					"closeCleanVueInstances": [],
+					"closeButtonText": "Close Panel",
+					"modalHandler": "$.pkp.controllers.modal.AjaxModalHandler",
+					"url": "http:\/\/0.0.0.0:8888\/index.php\/mercurio\/$$$call$$$\/grid\/settings\/library\/library-file-admin-grid\/add-file",
+			}
+}
+			);
+	});
+</script>
+		</li>
+	
 		
 		
     {/fbvFormArea}

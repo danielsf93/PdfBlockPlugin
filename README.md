@@ -10,9 +10,21 @@
 
 -adicione nas configurações do site e revista
 
--em settings coloque "título", "link externo de pdf"(POR ENQUANTO) e "descrição"
+-em settings coloque, na aba #Site url# coloque o url de sua revista, exemplo: http://0.0.0.0:8888/index.php/MINHAREVISTA. (Isso garantirá que o botão ADDFILE funcione(mas ainda não clique nele)) 
 
--//em ADDFILE, ABRIRÁ UMA PÁGINA, da qual é só salvar o arquivo, essa página refere-se a workflow - publisher library.
+-adicione o "título" e "descrição"
+-Salve
+
+-Clique novamente em Settings, e agora sim em ADDFILE.
+
+-em ADDFILE, ABRIRÁ UMA PÁGINA, da qual é só salvar o arquivo, essa página refere-se a workflow - publisher library da própria revista.
+
+-salve o arquivo em modo público
+
+
+
+---------------------------
+Defina o local onde o plugin aparecerá em sua revista
 
 -em aparencia escolha o local onde aparecerá
 
@@ -28,12 +40,16 @@
 ainda falta arrumar bastante coisa
 ///FALTA://
 
-1) enquanto os arquivos upados estão sendo direcionados a uma revista específica, independente da revista onde é editada as infos do plugin. exemplo, o plugin foi criado com base na revista "A", se for usado na revista "B", o pdf upado vai para no banco da revista "A".
+1) enquanto os arquivos upados estão sendo direcionados a uma revista específica, independente da revista onde é editada as infos do plugin. exemplo, o plugin foi criado com base na revista "A", se for usado na revista "B", o pdf upado vai para no banco da revista "A", por mais que o painel utilizado como ADDFILE seja da revista "A". O problema é editar a referencia do arquivo settings.tpl na linha 59, pois onde é:
+
+""url": "http://0.0.0.0:8888/index.php/um/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file"," deveria ficar algo (que funcione) como:
+""url": $perfecturl", ou
+""url": $siteurl . "/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file"". E explicando, $siteurl equivale à #Site url#  dos primeiros passos.
 
 
-2) falta encontrar forma de referenciar o link gerado de pdf "http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/api/file/file-api/download-library-file?libraryFileId=""""NNNNNN""""" ,(sendo """"NNNNNN""""" gerado quando salva o pdf) ao logo do plugin.
+2) falta encontrar forma de referenciar o link gerado de pdf "http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/api/file/file-api/download-library-file?libraryFileId=""""NNNNNN""""" ,(sendo """"NNNNNN""""" gerado quando salva o pdf) ao logo do plugin. é possível ver esse link em workflow > publisher > (selecione algum) > edit. o link é algo como "http://0.0.0.0:8888/index.php/mercurio/libraryFiles/downloadPublic/10", que é mais simples
 
 
-3) Talvez, fazer com que o código do arquivo settings.tpl, não direceione para nenhuma revista, e sim para uma pasta específica, ou fazer com que o codigo deste arquivo mude (if else) para a revista em edição atual automaticamente.
+3) referenciar esse link obtido na linha 04 do arquivo block.tpl
 
 

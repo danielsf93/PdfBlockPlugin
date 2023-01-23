@@ -1,4 +1,6 @@
 # PdfBlockPlugin para ojs
+(nome publico do plugin: "tentativa pdf")
+
 -baixe
 
 -coloque em plugins/block

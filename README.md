@@ -47,7 +47,7 @@ ainda falta arrumar bastante coisa
 ""url": $siteurl . "/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file"". E explicando, $siteurl equivale à #Site url#  dos primeiros passos.
 
 
-2) falta encontrar forma de referenciar o link gerado de pdf "http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/api/file/file-api/download-library-file?libraryFileId=""""NNNNNN""""" ,(sendo """"NNNNNN""""" gerado quando salva o pdf) ao logo do plugin. é possível ver esse link em workflow > publisher > (selecione algum) > edit. o link é algo como "http://0.0.0.0:8888/index.php/mercurio/libraryFiles/downloadPublic/10", que é mais simples
+2) falta encontrar forma de capturar o link gerado de pdf "http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/api/file/file-api/download-library-file?libraryFileId=""""NNNNNN""""" ,(sendo """"NNNNNN""""" gerado quando salva o pdf). é possível ver esse link em workflow > publisher > (selecione algum) > edit. o link é algo como "http://0.0.0.0:8888/index.php/mercurio/libraryFiles/downloadPublic/10", que é mais simples
 
 
 3) referenciar esse link obtido na linha 04 do arquivo block.tpl

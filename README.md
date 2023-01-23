@@ -3,9 +3,16 @@
 
 -coloque em plugins/block
 
+-(OBS: para funcionar, deve editar o arquivo block.tpl na linha 3 para o nome da pasta onde o projeto está salvo:http://0.0.0.0:8888/plugins/blocks/NOMEDAPASTA/logopdf.png"
+
+-no arquivo settings.tpl, nas linhas 39 e 56 editar para o nome de uma das revistas que você tem acesso: 
+0.0.0.0:8888/index.php/SUAREVISTA/$$$call$$$/grid/settings/library/library-file-admin-grid/add-file
+
 -adicione nas configurações do site e revista
 
--em settings coloque "título", "link externo de pdf" e "descrição"
+-em settings coloque "título", "link externo de pdf"(POR ENQUANTO) e "descrição"
+
+-//em ADDFILE, ABRIRÁ UMA PÁGINA, da qual é só salvar o arquivo, essa página refere-se a workflow - publisher library.
 
 -em aparencia escolha o local onde aparecerá
 
@@ -27,6 +34,6 @@ ainda falta arrumar bastante coisa
 2) falta encontrar forma de referenciar o link gerado de pdf "http://0.0.0.0:8888/index.php/mercurio/$$$call$$$/api/file/file-api/download-library-file?libraryFileId=""""NNNNNN""""" ,(sendo """"NNNNNN""""" gerado quando salva o pdf) ao logo do plugin.
 
 
-3) Talvez, fazer com que o código do arquivo settings.tpl, não direceione para nenhuma revista, e sim para uma pasta específica, ou fazer com que o codigo deste arquivo mude (if else) para cada revista automaticamente.
+3) Talvez, fazer com que o código do arquivo settings.tpl, não direceione para nenhuma revista, e sim para uma pasta específica, ou fazer com que o codigo deste arquivo mude (if else) para a revista em edição atual automaticamente.
 
 
